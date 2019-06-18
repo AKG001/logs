@@ -1,0 +1,24 @@
+Test Run By akshat on Mon Jun 17 19:00:57 2019
+Native configuration is x86_64-pc-linux-gnu
+
+		=== libstdc++ tests ===
+
+Schedule of variations:
+    unix
+
+Running target unix
+Running /home/akshat/Desktop/GSoC/git_trunk/gcc/libstdc++-v3/testsuite/libstdc++-abi/abi.exp ...
+ERROR: couldn't open "config.ii": no such file or directory
+ERROR: tcl error sourcing /home/akshat/Desktop/GSoC/git_trunk/gcc/libstdc++-v3/testsuite/libstdc++-abi/abi.exp.
+Running /home/akshat/Desktop/GSoC/git_trunk/gcc/libstdc++-v3/testsuite/libstdc++-dg/conformance.exp ...
+ERROR: couldn't open "config.ii": no such file or directory
+ERROR: tcl error sourcing /home/akshat/Desktop/GSoC/git_trunk/gcc/libstdc++-v3/testsuite/libstdc++-dg/conformance.exp.
+Running /home/akshat/Desktop/GSoC/git_trunk/gcc/libstdc++-v3/testsuite/libstdc++-prettyprinters/prettyprinters.exp ...
+ERROR: couldn't open "config.ii": no such file or directory
+ERROR: tcl error sourcing /home/akshat/Desktop/GSoC/git_trunk/gcc/libstdc++-v3/testsuite/libstdc++-prettyprinters/prettyprinters.exp.
+Running /home/akshat/Desktop/GSoC/git_trunk/gcc/libstdc++-v3/testsuite/libstdc++-xmethods/xmethods.exp ...
+ERROR: couldn't open "config.ii": no such file or directory
+ERROR: tcl error sourcing /home/akshat/Desktop/GSoC/git_trunk/gcc/libstdc++-v3/testsuite/libstdc++-xmethods/xmethods.exp.
+
+		=== libstdc++ Summary ===
+

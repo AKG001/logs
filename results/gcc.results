@@ -1,0 +1,24 @@
+Tests that now fail, but worked before (1 tests):
+
+gcc.dg/plugin/diagnostic-test-expressions-1.c -fplugin=./diagnostic_plugin_test_tree_expression_range.so (test for excess errors)
+
+Tests that now work, but didn't before (2 tests):
+
+gcc.dg/plugin/dump-1.c -fplugin=./dump_plugin.so  (test for warnings, line 15)
+gcc.dg/plugin/dump-2.c -fplugin=./dump_plugin.so  (test for warnings, line 15)
+
+New tests that FAIL (5 tests):
+
+gcc.dg/plugin/diagnostic-test-expressions-1.c -fplugin=./diagnostic_plugin_test_tree_expression_range.so  4 blank line(s) in output
+gcc.dg/plugin/diagnostic-test-expressions-1.c -fplugin=./diagnostic_plugin_test_tree_expression_range.so  expected multiline pattern lines 415-416 not found: "   __emit_expression_range \(0, \(vector\(4, float\)\)\{2\., 2\., 2\., 2\.\} \+ 1\);.*\n                                                 ~~~~~~~~~~~~~~~~~\^~~\n"
+gcc.dg/plugin/diagnostic-test-expressions-1.c -fplugin=./diagnostic_plugin_test_tree_expression_range.so  expected multiline pattern lines 516-517 not found: "   __emit_expression_range \(0,  __builtin_offsetof \(struct s, f\) \+ i \);.*\n                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\^~~\n"
+gcc.dg/plugin/diagnostic-test-expressions-1.c -fplugin=./diagnostic_plugin_test_tree_expression_range.so  expected multiline pattern lines 525-526 not found: "   __emit_expression_range \(0,  __builtin_choose_expr \(1, i, i\) \+ i\);.*\n                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\^~~\n"
+gcc.dg/plugin/diagnostic-test-expressions-1.c -fplugin=./diagnostic_plugin_test_tree_expression_range.so  expected multiline pattern lines 559-560 not found: "   __emit_expression_range \(0, __builtin_call_with_static_chain \(f \(i\), ptr\)\);.*\n                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\^~~~~~~~~~~\n"
+
+Old tests that passed, that have disappeared (4 tests): (Eeek!)
+
+gcc.dg/plugin/diagnostic-test-expressions-1.c -fplugin=./diagnostic_plugin_test_tree_expression_range.so  expected multiline pattern lines 415-416 was found: "   __emit_expression_range \(0, \(vector\(4, float\)\)\{2\., 2\., 2\., 2\.\} \+ 1\);.*\n                                                 ~~~~~~~~~~~~~~~~~\^~~\n"
+gcc.dg/plugin/diagnostic-test-expressions-1.c -fplugin=./diagnostic_plugin_test_tree_expression_range.so  expected multiline pattern lines 516-517 was found: "   __emit_expression_range \(0,  __builtin_offsetof \(struct s, f\) \+ i \);.*\n                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\^~~\n"
+gcc.dg/plugin/diagnostic-test-expressions-1.c -fplugin=./diagnostic_plugin_test_tree_expression_range.so  expected multiline pattern lines 525-526 was found: "   __emit_expression_range \(0,  __builtin_choose_expr \(1, i, i\) \+ i\);.*\n                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\^~~\n"
+gcc.dg/plugin/diagnostic-test-expressions-1.c -fplugin=./diagnostic_plugin_test_tree_expression_range.so  expected multiline pattern lines 559-560 was found: "   __emit_expression_range \(0, __builtin_call_with_static_chain \(f \(i\), ptr\)\);.*\n                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\^~~~~~~~~~~\n"
+

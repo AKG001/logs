@@ -1,0 +1,13 @@
+Tests that now fail, but worked before (1 tests):
+
+g++.dg/plugin/diagnostic-test-expressions-1.C -fplugin=./diagnostic_plugin_test_tree_expression_range.so (test for excess errors)
+
+New tests that FAIL (2 tests):
+
+g++.dg/plugin/diagnostic-test-expressions-1.C -fplugin=./diagnostic_plugin_test_tree_expression_range.so  1 blank line(s) in output
+g++.dg/plugin/diagnostic-test-expressions-1.C -fplugin=./diagnostic_plugin_test_tree_expression_range.so  expected multiline pattern lines 627-628 not found: "   __emit_expression_range \(0, \(vector\(4, float\)\)\{2\., 2\., 2\., 2\.\} \+ 1\);.*\n                                                 ~~~~~~~~~~~~~~~~~\^~~\n"
+
+Old tests that passed, that have disappeared (1 tests): (Eeek!)
+
+g++.dg/plugin/diagnostic-test-expressions-1.C -fplugin=./diagnostic_plugin_test_tree_expression_range.so  expected multiline pattern lines 627-628 was found: "   __emit_expression_range \(0, \(vector\(4, float\)\)\{2\., 2\., 2\., 2\.\} \+ 1\);.*\n                                                 ~~~~~~~~~~~~~~~~~\^~~\n"
+

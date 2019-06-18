@@ -1,0 +1,17 @@
+Test Run By akshat on Mon Jun 17 19:00:56 2019
+Native configuration is x86_64-pc-linux-gnu
+
+		=== libgomp tests ===
+
+Schedule of variations:
+    unix
+
+Running target unix
+Running ../../../../gcc/libgomp/testsuite/libgomp.c/c.exp ...
+PASS: libgomp.c/../libgomp.c-c++-common/atomic-18.c (test for excess errors)
+PASS: libgomp.c/../libgomp.c-c++-common/atomic-18.c execution test
+PASS: libgomp.c/../libgomp.c-c++-common/cancel-parallel-1.c (test for excess errors)
+
+		=== libgomp Summary ===
+
+# of expected passes		3
